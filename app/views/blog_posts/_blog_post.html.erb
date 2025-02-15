@@ -1,0 +1,30 @@
+<div id="<%= dom_id blog_post %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Title:</strong>
+    <%= blog_post.title %>
+  </p>
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Body:</strong>
+    <%= blog_post.body %>
+  </p>
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Meta description:</strong>
+    <%= blog_post.meta_description %>
+  </p>
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Meta title:</strong>
+    <%= blog_post.meta_title %>
+  </p>
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Meta image:</strong>
+    <%= link_to blog_post.meta_image.filename, blog_post.meta_image if blog_post.meta_image.attached? %>
+  </p>
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Banner image:</strong>
+    <%= link_to blog_post.banner_image.filename, blog_post.banner_image if blog_post.banner_image.attached? %>
+  </p>
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Tags:</strong>
+    <%= blog_post.tags %>
+  </p>
+</div>
